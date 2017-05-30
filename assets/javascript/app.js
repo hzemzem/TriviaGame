@@ -61,7 +61,7 @@ $(document).ready(function() {
 		function generateHTML() {
 			gameHTML = "<p class='text-center timer-p'>Time Remaining: <span class='timer'>30</span></p><p class='text-center'>" + questionArray[questionCounter] + "</p><p class='first-answer answer'>A. " + answerArray[questionCounter][0] + "</p><p class='answer'>B. "+answerArray[questionCounter][1]+"</p><p class='answer'>C. "+answerArray[questionCounter][2]+"</p><p class='answer'>D. "+answerArray[questionCounter][3]+"</p>";
 			$(".mainArea").html(gameHTML);
-			soundTrack.play();
+
 		}
 
 		function wait() {
@@ -95,6 +95,7 @@ $(document).ready(function() {
 			$(".mainArea").html(gameHTML);
 		}
 
+
 		function resetGame() {
 			questionCounter = 0;
 			correctTally = 0;
@@ -119,4 +120,3 @@ $(document).ready(function() {
 		var correctTally = 0;
 		var incorrectTally = 0;
 		var unansweredTally = 0;
-		var soundTrack = new Audio("assets/sounds/soundtrack.mp3");
